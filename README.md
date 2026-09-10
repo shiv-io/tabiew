@@ -156,6 +156,10 @@ curl -s "https://raw.githubusercontent.com/wiki/shshemi/tabiew/housing.csv" | tw
 
 ## Useful Keybindings️
 
+The full list is in the app. Press `:` to open the command palette, then pick
+`Keybindings`. That view is searchable, so you can type `column` or `ctrl` to find a key
+without leaving Tabiew.
+
 |Key Combination|Functionality|
 |-|-|
 | `Enter`| Open sheet|
@@ -179,7 +183,7 @@ curl -s "https://raw.githubusercontent.com/wiki/shshemi/tabiew/housing.csv" | tw
 
 Press `:` to open the command palette and type to filter. It lists everything Tabiew can
 do, including `Query`, `Filter`, `Order`, `Select`, `Cast`, `Import`, `Export`, `Schema`,
-`ThemeSelector`, and `ToggleNerdFont`.
+`ThemeSelector`, `Keybindings`, and `ToggleNerdFont`.
 
 Four prefixes skip the list and open an inline editor directly:
 

@@ -74,6 +74,7 @@ pub const REFRESH: Icon = Icon("\u{F021} ");
 pub const POWER: Icon = Icon("\u{F011} ");
 pub const SCHEMA: Icon = Icon("\u{F0E8} ");
 pub const INFO: Icon = Icon("\u{F05A} ");
+pub const KEYBOARD: Icon = Icon("\u{F11C} ");
 pub const FONT: Icon = Icon("\u{F031} ");
 pub const ROW_NUMBERS: Icon = Icon("\u{F0CB} ");
 pub const BORDERS: Icon = Icon("\u{F096} ");

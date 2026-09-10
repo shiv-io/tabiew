@@ -14,7 +14,7 @@ use crate::{
         component::{Component, FocusState},
         popups::{
             about::About, command_palette::CommandPalette, fp_precision_picker::FpPrecisionPicker,
-            importer::Importer, theme_selector::ThemeSelector,
+            importer::Importer, keybindings::Keybindings, theme_selector::ThemeSelector,
         },
         schema::schema::Schema,
     },
@@ -51,6 +51,10 @@ impl App {
 
     fn show_about(&mut self) {
         self.overlay = Some(Overlay::About(Default::default()));
+    }
+
+    fn show_keybindings(&mut self) {
+        self.overlay = Some(Overlay::Keybindings(Default::default()));
     }
 
     fn show_theme_selector(&mut self) {
@@ -194,6 +198,7 @@ impl Component for App {
             Message::AppShowFpPrecisionPicker => self.show_fp_precision_picker(),
             Message::AppShowSchema => self.show_schema(),
             Message::AppShowImporter => self.show_importer(),
+            Message::AppShowKeybindings => self.show_keybindings(),
             Message::AppDismissSchema => self.dismiss_schema(),
             Message::AppShowSqlQuery => self.show_sql_query_picker(),
             Message::AppReloadConfig => self.reload_app_config(),
@@ -247,6 +252,7 @@ pub enum Overlay {
     CommandPicker(CommandPalette),
     ThemeSelector(ThemeSelector),
     FpPrecisionPicker(FpPrecisionPicker),
+    Keybindings(Keybindings),
     SqlQueryPicker(SqlQueryPicker),
     Import(Importer),
 }
@@ -259,6 +265,7 @@ impl Overlay {
             Overlay::CommandPicker(command_palette) => command_palette,
             Overlay::ThemeSelector(theme_selector) => theme_selector,
             Overlay::FpPrecisionPicker(fp_precision_picker) => fp_precision_picker,
+            Overlay::Keybindings(keybindings) => keybindings,
             Overlay::Import(step_by_step) => step_by_step,
             Overlay::SqlQueryPicker(sql_query_picker) => sql_query_picker,
         }

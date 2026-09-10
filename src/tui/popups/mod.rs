@@ -13,6 +13,7 @@ pub mod histogram_builder;
 pub mod importer;
 pub mod importers;
 pub mod inline_query_picker;
+pub mod keybindings;
 pub mod multi_step_overlay;
 pub mod scatter_plot_builder;
 pub mod sql_query_picker;

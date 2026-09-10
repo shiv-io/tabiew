@@ -19,6 +19,7 @@ pub enum Message {
     AppShowFpPrecisionPicker,
     AppShowSchema,
     AppShowImporter,
+    AppShowKeybindings,
     AppDismissSchema,
     AppShowSqlQuery,
     AppDownloadDataSource(Url, Arc<dyn Reader>),
